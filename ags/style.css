@@ -1,0 +1,60 @@
+/* Created   by https://github.com/Filz0r 
+   Designed  by https://github.com/Filz0r
+   Maintained by https://github.com/Filz0r
+*/
+.bar {
+  background-color: #32302F;
+  color: #D79921;
+  padding: 10px; }
+
+.left-bar {
+  min-width: 30px;
+  background-color: #32302F;
+  padding: 10px; }
+
+label {
+  font-weight: bold;
+  font-size: 15px; }
+
+.workspaces {
+  background-color: #282828;
+  padding: 5px;
+  margin: 5px 5px 5px 5px;
+  border-radius: 6px; }
+  .workspaces button {
+    border: none;
+    padding: 2px 0px;
+    margin: 1px;
+    background-color: #B16286;
+    color: #282828; }
+  .workspaces button.focused {
+    background-color: #D65D0E; }
+  .workspaces button:hover {
+    background-color: #458588; }
+  .workspaces .workspace-btn {
+    color: #D79921;
+    margin: 2px;
+    padding-right: 2px; }
+
+.clock {
+  padding: 5px 0;
+  margin: 10px 0; }
+  .clock .clock-hours, .clock .clock-minutes {
+    margin: 2px 5px;
+    background-color: #282828;
+    padding: 5px 6px;
+    border-radius: 4px; }
+
+.client-title {
+  color: #689D6A; }
+
+.notification {
+  color: yellow; }
+
+levelbar block,
+highlight {
+  min-height: 100px;
+  min-width: 15px; }
+
+.battery {
+  background-color: yellow; }

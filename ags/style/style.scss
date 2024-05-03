@@ -1,0 +1,104 @@
+/* Created   by https://github.com/Filz0r 
+   Designed  by https://github.com/Filz0r
+   Maintained by https://github.com/Filz0r
+*/
+
+// Variable Color's
+$background: #282828; // changed
+$background-alt: #32302F; // changed
+$foreground: #EBDBB2; // changed
+$black: $background;  //changed
+$white: $foreground; //changed
+$gray: #A89984; //changed
+$gray-alt: #928374; //changed
+$red: #CC241D; //changed
+$green: #98971A;//changed
+$yellow: #D79921;//changed
+$blue: #458588;//changed
+$magenta: #BB9AF7;
+$cyan: #7DCFFF;
+$purple: #B16286;//added
+$aqua: #689D6A;//added
+$orange: #D65D0E;//added
+
+
+//window {
+//    font-family: "FiraMono Nerd Font";
+//    font-size: 12px;
+//    color: $foreground;
+//}
+
+.bar {
+    background-color: $background-alt;
+    color: $yellow;
+    padding: 10px;
+}
+
+.left-bar {
+    min-width: 30px;
+    background-color: $background-alt;
+    padding: 10px;
+}
+
+
+label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.workspaces {
+    background-color: $background;
+    padding: 5px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 6px;
+    button {
+        border: none;
+        padding: 2px 0px;
+        margin: 1px;
+        background-color: $purple;
+        color: $background;
+    }
+    button.focused {
+        background-color: $orange;
+    }
+    button:hover {
+        background-color: $blue;
+    }
+    .workspace-btn {
+        color: $yellow;
+        margin: 2px;
+        padding-right: 2px;
+    }
+}
+
+.clock {
+    //background-color: $background;
+    padding: 5px 0;
+    margin: 10px 0;
+    .clock-hours, .clock-minutes {
+        margin: 2px 5px;
+        background-color: $background;
+        padding: 5px 6px;
+        border-radius: 4px;
+    }
+}
+
+
+.client-title {
+    color: $aqua;
+}
+
+.notification {
+    color: yellow;
+}
+
+levelbar block,
+highlight {
+    min-height: 100px;
+    min-width: 15px;
+}
+
+.battery {
+    background-color: yellow;
+}
+
