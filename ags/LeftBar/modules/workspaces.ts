@@ -23,6 +23,7 @@ const updateWsButtons = (button) => {
     {
         button.class_name += " focused";
         button.visible = true;
+        return ;
     } else {
         let workspaceObj : number | undefined = hyprland.getWorkspace(wsID)?.windows;
         if (workspaceObj === undefined || workspaceObj === 0) {
@@ -53,8 +54,6 @@ const workspaces = () => {
                 visible: isWorkspaceVisible,
             })
         });
-
-    wsArray.forEach(button => print(`id: ${button.attribute} class: ${button.class_name} visible: ${button.visible}`));
 
     const widget = Widget.Box({
         class_name: "workspaces",
