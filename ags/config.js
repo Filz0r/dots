@@ -1,4 +1,5 @@
 const main = '/tmp/ags/main.js';
+const style = '/tmp/ags/style.css';
 
 Utils.monitorFile(
     `${App.configDir}/style`,
@@ -7,11 +8,9 @@ Utils.monitorFile(
 
         const scss = `${App.configDir}/style/style.scss`;
 
-        const css = `${App.configDir}/style.css`;
-
-        Utils.exec(`sassc ${scss} ${css}`);
+        Utils.exec(`sassc ${scss} ${style}`);
         App.resetCss();
-        App.applyCss(css);
+        App.applyCss(style);
     },
 );
 
