@@ -1,8 +1,11 @@
+import { Button } from "resource:///com/github/Aylur/ags/widgets/button.js";
+import Gtk from "types/@girs/gtk-3.0/gtk-3.0";
+
 const hyprland = await Service.import("hyprland")
 
-const getWorkspaceIcon = (workspace: number) : string => {
+const getWorkspaceIcon = (workspace: number): string => {
 
-    let workspaceObj : number | undefined = hyprland.getWorkspace(workspace + 1)?.windows;
+    let workspaceObj: number | undefined = hyprland.getWorkspace(workspace + 1)?.windows;
 
     if (workspaceObj === undefined || workspaceObj === 0)
         return ``;
@@ -12,12 +15,12 @@ const getWorkspaceIcon = (workspace: number) : string => {
     return ``;
 }
 
-const hyprDispatch = async (workspace: number)  => {
-   await hyprland.messageAsync(`dispatch workspace ${workspace}`);
+const hyprDispatch = async (workspace: number) => {
+    await hyprland.messageAsync(`dispatch workspace ${workspace}`);
 }
 
-const updateWsButtons = (button) => {
-    let wsID : number = Number(button.name.split('-')[1]);
+const updateWsButtons = (button: Button<Gtk.Widget, number>) => {
+    let wsID : number = Number(button.name?.split('-')[1]);
     button.class_name = "workspace-btn";
     if (wsID === hyprland.active.workspace.id)
     {
@@ -62,8 +65,8 @@ const workspaces = () => {
     });
 
     return Widget.EventBox({
-       onScrollUp: () => { hyprDispatch( activeWorkspace + 1)},
-       onScrollDown: () => { hyprDispatch(activeWorkspace - 1)},
+       onScrollUp: async () => { await hyprDispatch( activeWorkspace + 1)},
+       onScrollDown: async () => { await hyprDispatch(activeWorkspace - 1)},
        child: widget,
     })
         .hook(hyprland.active.workspace, () => {
