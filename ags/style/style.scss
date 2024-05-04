@@ -22,24 +22,17 @@ $aqua: #689D6A;//added
 $orange: #D65D0E;//added
 
 
-//window {
-//    font-family: "FiraMono Nerd Font";
-//    font-size: 12px;
-//    color: $foreground;
-//}
-
 .bar {
     background-color: $background-alt;
     color: $yellow;
-    padding: 10px;
+    //padding: 10px;
 }
 
 .left-bar {
-    min-width: 30px;
+    //min-width: 30px;
     background-color: $background-alt;
-    padding: 10px;
+    //padding: 10px;
 }
-
 
 label {
     font-weight: bold;
@@ -47,17 +40,11 @@ label {
 }
 
 .workspaces {
-    background-color: $background;
-    padding: 5px;
-    //margin: 3px;
+    //background-color: $background;
+    padding: 5px 5px 0 5px;
+    margin-top: 5px;
+    margin-bottom: 0;
     border-radius: 6px;
-    //button {
-    //    border: none;
-    //    padding: 2px 0px;
-    //    margin: 1px;
-    //    background-color: $purple;
-    //    color: $background;
-    //}
     .workspace-btn.focused {
         background-color: $orange;
     }
@@ -74,8 +61,8 @@ label {
 
 .clock {
     //background-color: $background;
-    padding: 5px 0;
-    margin: 10px 0;
+    padding: 50px 0 0 0;
+    //margin: 10px 0;
     .clock-hours, .clock-minutes {
         margin: 2px 5px;
         background-color: $background;
@@ -101,5 +88,8 @@ highlight {
 
 .battery {
     background-color: yellow;
+    padding: 2px;
+    margin: 2px;
+    color: $red;
 }
 
