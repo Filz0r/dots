@@ -77,18 +77,20 @@ const widget :Box<Icon, Revealer<ProgressBar>> = Widget.Box({
         class_name: "battery-box",
         visible: battery.bind("available"),
         child: widget,
-        onHover: (w : EventBox<Box<Icon, ProgressBar>>) => {
+        onHover: (w : EventBox<Box<Icon, Revealer<ProgressBar>>>) => {
             let batteryReveal: Revealer<ProgressBar> = w.child.children[1];
-            batteryReveal.reveal_child = !batteryReveal.reveal_child;
+            if (batteryReveal.reveal_child === false)
+                batteryReveal.reveal_child = true;
             // let progressBar : ProgressBar = batteryReveal.child;
             // let icon : Icon = w.child.children[0];
             // console.log("hover: " + progressBar.value);
             // console.log("hover: " + progressBar.class_name);
             // console.log("hover: " + icon.class_name);
         },
-        onHoverLost: (w) => {
+        onHoverLost: (w : EventBox<Box<Icon, Revealer<ProgressBar>>>) => {
             let batteryReveal: Revealer<ProgressBar> = w.child.children[1];
-            batteryReveal.reveal_child = !batteryReveal.reveal_child;
+            if (batteryReveal.reveal_child === true)
+                batteryReveal.reveal_child = false;
         }
     })
 }
