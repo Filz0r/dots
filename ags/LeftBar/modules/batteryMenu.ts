@@ -75,11 +75,12 @@ const widget :Box<Icon, Revealer<ProgressBar>> = Widget.Box({
     // });
     return Widget.EventBox({
         class_name: "battery-box",
+        // tooltip_text: `${battery.percent}% ${battery.time_remaining}`,
         visible: battery.bind("available"),
         child: widget,
         onHover: (w : EventBox<Box<Icon, Revealer<ProgressBar>>>) => {
             let batteryReveal: Revealer<ProgressBar> = w.child.children[1];
-            if (batteryReveal.reveal_child === false)
+            if (!batteryReveal.reveal_child)
                 batteryReveal.reveal_child = true;
             // let progressBar : ProgressBar = batteryReveal.child;
             // let icon : Icon = w.child.children[0];
@@ -89,10 +90,12 @@ const widget :Box<Icon, Revealer<ProgressBar>> = Widget.Box({
         },
         onHoverLost: (w : EventBox<Box<Icon, Revealer<ProgressBar>>>) => {
             let batteryReveal: Revealer<ProgressBar> = w.child.children[1];
-            if (batteryReveal.reveal_child === true)
+            if (batteryReveal.reveal_child)
                 batteryReveal.reveal_child = false;
         }
-    })
+    }).hook(battery, (self : EventBox<Box<Icon, Revealer<ProgressBar>>>) => {
+        self.tooltip_text = `${battery.percent}% ${battery.time_remaining}`;
+    });
 }
 
 export default batteryMenu;

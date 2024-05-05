@@ -3,7 +3,14 @@ const lockButton = () => {
     let icon = "";
     return Widget.Button({
         vpack: "end",
-        child: Widget.Label(`${icon}`),
+        cursor: "pointer",
+        class_name: "lock-button",
+        child: Widget.Label( {
+            label: `${icon}`,
+            justification: "center",
+            class_name: "lock-button-icon",
+
+        }),
         onClicked: () => {
             Utils.exec(`${cmd}`);
         }

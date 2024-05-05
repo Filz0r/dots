@@ -22,16 +22,13 @@ $aqua: #689D6A;//added
 $orange: #D65D0E;//added
 
 
-.bar {
+.bar, .left-bar {
     background-color: $background-alt;
-    //color: $yellow;
-    //padding: 10px;
 }
 
-.left-bar {
-    //min-width: 30px;
-    background-color: $background-alt;
-    //padding: 10px;
+.left-bar-bottom {
+    padding: 0 5px;
+    color: $foreground;
 }
 
 label {
@@ -40,14 +37,13 @@ label {
 }
 
 .workspaces {
-    //background-color: $background;
-    padding: 5px 5px 0 5px;
+    padding: 5px 5px 5px 5px;
     margin-top: 5px;
     margin-bottom: 0;
     border-radius: 6px;
     .workspace-btn.focused {
         background-color: $foreground;
-        border-color: $gray;
+        border-color: $yellow;
         border-width: 3px;
     }
     button:hover {
@@ -58,14 +54,12 @@ label {
         color: $yellow;
         border: $yellow 2px solid;
         margin: 2px;
-        padding-right: 2px;
+        padding: 2px;
     }
 }
 
 .clock {
-    //background-color: $background;
-    padding: 50px 0 0 0;
-    //margin: 10px 0;
+    padding: 70px 0 0 0;
     .clock-hours, .clock-minutes {
         margin: 2px 5px;
         background-color: $background;
@@ -74,43 +68,18 @@ label {
     }
 }
 
-
-.client-title {
-    color: $aqua;
-}
-
-.notification {
-    color: yellow;
-}
-
-//levelbar block,
-//highlight {
-//    min-height: 100px;
-//    min-width: 15px;
-//}
-
-.left-bar-bottom {
-    margin:0 5px;
-    padding: 0 5px;
-    //background-color: yellow;
-    color: $foreground;
-}
-
 .battery-box {
     .battery-icon {
         font-size: 20px;
         margin: 5px 5px;
-        //color: $green;
     }
     .battery-bar{
-        //background-color: $red;
         color: $cyan;
         padding: 0 3px;
         margin: 0 4px;
 
         progress {
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
+            border-radius: 8px;
             min-width: 15px;
         }
         trough {
@@ -162,4 +131,14 @@ label {
     }
 }
 
+
+.lock-button {
+    background-color: $background-alt;
+    color: $orange;
+    padding-right: 5px;
+    border: none;
+    .lock-button-icon {
+        font-size: 20px;
+    }
+}
 

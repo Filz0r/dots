@@ -33,7 +33,7 @@ const leftBarBottom = () => {
         vpack: "end",
         vertical: true,
         // vpack: "center",
-        spacing: 10,
+        // spacing: 5,
         children: [
             batteryMenu(),
             lockButton(),
