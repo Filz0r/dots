@@ -7,12 +7,12 @@ const getWorkspaceIcon = (workspace: number): string => {
 
     let workspaceObj: number | undefined = hyprland.getWorkspace(workspace + 1)?.windows;
 
-    if (workspaceObj === undefined || workspaceObj === 0)
+    if ((workspaceObj === undefined || workspaceObj === 0) && workspace !== hyprland.active.workspace.id)
         return ``;
-    else if (workspaceObj != undefined && workspaceObj > 0)
+    else if ((workspaceObj != undefined && workspaceObj > 0) || workspace === hyprland.active.workspace.id)
         return ``;
-
-    return ``;
+    else
+        return "fuck";
 }
 
 const hyprDispatch = async (workspace: number) => {

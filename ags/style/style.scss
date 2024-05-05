@@ -24,7 +24,7 @@ $orange: #D65D0E;//added
 
 .bar {
     background-color: $background-alt;
-    color: $yellow;
+    //color: $yellow;
     //padding: 10px;
 }
 
@@ -46,14 +46,17 @@ label {
     margin-bottom: 0;
     border-radius: 6px;
     .workspace-btn.focused {
-        background-color: $orange;
+        background-color: $foreground;
+        border-color: $gray;
+        border-width: 3px;
     }
     button:hover {
         background-color: $blue;
     }
     .workspace-btn {
+        background-color: $background;
         color: $yellow;
-        border: $green 1px solid;
+        border: $yellow 2px solid;
         margin: 2px;
         padding-right: 2px;
     }
@@ -80,16 +83,49 @@ label {
     color: yellow;
 }
 
-levelbar block,
-highlight {
-    min-height: 100px;
-    min-width: 15px;
+//levelbar block,
+//highlight {
+//    min-height: 100px;
+//    min-width: 15px;
+//}
+
+.left-bar-bottom {
+    margin:0 5px;
+    padding: 0 5px;
+    //background-color: yellow;
+    color: $foreground;
 }
 
-.battery {
-    background-color: yellow;
-    padding: 2px;
-    margin: 2px;
-    color: $red;
+.battery-box {
+    color: $magenta;
+    background-color: $purple ;
+    //padding: 0px 5px;
+    //margin: 0px 5px;
+    .battery {
+        //background-color: $green;
+    }
+    levelbar {
+        border-radius: 5px;
+        color: #689D6A;
+        background-color: magenta;
+    }
+    .battery-icon {
+        font-size: 20px;
+        //color: $green;
+    }
+    .battery-bar{
+        background-color: $red;
+        color: $cyan;
+        //padding: 0 5px;
+        //margin: 0 5px;
+    }
+    levelbar block, highlight {
+        //min-height: 10px;
+        color: red;
+        border-radius: 8px;
+        //padding: 20px 0;
+        //margin: 20px 0;
+        background-color: $yellow;
+    }
 }
 

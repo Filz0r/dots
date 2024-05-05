@@ -8,7 +8,7 @@ const leftBarTop = () => {
     return Widget.Box({
         hpack: "start",
         // vpack: "center",
-        spacing: 50,
+        spacing: 0,
         children: [
             workspaces(),
         ],
@@ -19,7 +19,7 @@ const leftBarCenter = () => {
     return Widget.Box({
         hpack: "center",
         // vpack: "center",
-        spacing: 50,
+        spacing: 0,
         children: [
             clock(),
         ],
@@ -28,12 +28,15 @@ const leftBarCenter = () => {
 
 const leftBarBottom = () => {
     return Widget.Box({
+        class_name: "left-bar-bottom",
         hpack: "end",
+        vpack: "end",
+        vertical: true,
         // vpack: "center",
-        spacing: 50,
+        spacing: 10,
         children: [
-            lockButton(),
             batteryMenu(),
+            lockButton(),
         ],
     })
 }
