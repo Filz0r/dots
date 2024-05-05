@@ -97,35 +97,69 @@ label {
 }
 
 .battery-box {
-    color: $magenta;
-    background-color: $purple ;
-    //padding: 0px 5px;
-    //margin: 0px 5px;
-    .battery {
-        //background-color: $green;
-    }
-    levelbar {
-        border-radius: 5px;
-        color: #689D6A;
-        background-color: magenta;
-    }
     .battery-icon {
         font-size: 20px;
+        margin: 5px 5px;
         //color: $green;
     }
     .battery-bar{
-        background-color: $red;
+        //background-color: $red;
         color: $cyan;
-        //padding: 0 5px;
-        //margin: 0 5px;
+        padding: 0 3px;
+        margin: 0 4px;
+
+        progress {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            min-width: 15px;
+        }
+        trough {
+            background-color: $foreground;
+            border-radius: 8px;
+            min-width: 15px;
+            border: none;
+            margin: 4px 0;
+        }
     }
-    levelbar block, highlight {
-        //min-height: 10px;
-        color: red;
-        border-radius: 8px;
-        //padding: 20px 0;
-        //margin: 20px 0;
-        background-color: $yellow;
+    .charging {
+        progress {
+            background-color: $blue;
+        }
+
+        &.battery-icon {
+            color: $blue;
+        }
+    }
+
+    .battery-high {
+        progress {
+            background-color: $green;
+        }
+
+        &.battery-icon {
+            color: $green;
+        }
+    }
+
+    .battery-medium {
+        progress {
+            background-color: $yellow;
+        }
+
+        &.battery-icon {
+            color: $yellow;
+        }
+    }
+
+    .battery-low {
+        progress {
+            background-color: $red;
+        }
+
+        &.battery-icon {
+            color: $red;
+        }
     }
 }
+
 
