@@ -51,7 +51,6 @@ const widget :Box<Icon, Revealer<ProgressBar>> = Widget.Box({
             Widget.Revealer({
                 revealChild: false,
                 transition: "slide_up",
-                class_name: "battery-reveal",
                 child: Widget.ProgressBar({
                         show_text: false,
                         vertical: true,

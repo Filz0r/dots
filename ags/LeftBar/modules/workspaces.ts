@@ -1,18 +1,22 @@
 import { Button } from "resource:///com/github/Aylur/ags/widgets/button.js";
 import Gtk from "types/@girs/gtk-3.0/gtk-3.0";
+import options from "../../utils/options";
+
 
 const hyprland = await Service.import("hyprland")
+const usedIcon = options.icons.workspaces.active;
+const emptyIcon = options.icons.workspaces.inactive;
 
 const getWorkspaceIcon = (workspace: number): string => {
 
-    let workspaceObj: number | undefined = hyprland.getWorkspace(workspace + 1)?.windows;
-
-    if ((workspaceObj === undefined || workspaceObj === 0) && workspace !== hyprland.active.workspace.id)
-        return ``;
-    else if ((workspaceObj != undefined && workspaceObj > 0) || workspace === hyprland.active.workspace.id)
-        return ``;
-    else
-        return "fuck";
+    // let workspaceObj: number | undefined = hyprland.getWorkspace(workspace + 1)?.windows;
+    //
+    // if ((workspaceObj === undefined || workspaceObj === 0) && workspace !== hyprland.active.workspace.id)
+    //     return emptyIcon;
+    // else if ((workspaceObj != undefined && workspaceObj > 0) || workspace === hyprland.active.workspace.id)
+        return usedIcon;
+    // else
+    //     return "fuck";
 }
 
 const hyprDispatch = async (workspace: number) => {
@@ -30,11 +34,11 @@ const updateWsButtons = (button: Button<Gtk.Widget, number>) => {
     } else {
         let workspaceObj : number | undefined = hyprland.getWorkspace(wsID)?.windows;
         if (workspaceObj === undefined || workspaceObj === 0) {
-            button.label = ``;
+            // button.label = emptyIcon;
             button.visible = false;
         }
         else if (workspaceObj != undefined && workspaceObj > 0){
-            button.label = ``;
+            // button.label = usedIcon;
             button.visible = true;
         }
     }

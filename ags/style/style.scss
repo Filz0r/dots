@@ -4,31 +4,12 @@
 */
 
 // Variable Color's
-$background: #282828; // changed
-$background-alt: #32302F; // changed
-$foreground: #EBDBB2; // changed
-$black: $background;  //changed
-$white: $foreground; //changed
-$gray: #A89984; //changed
-$gray-alt: #928374; //changed
-$red: #CC241D; //changed
-$green: #98971A;//changed
-$yellow: #D79921;//changed
-$blue: #458588;//changed
-$magenta: #BB9AF7;
-$cyan: #7DCFFF;
-$purple: #B16286;//added
-$aqua: #689D6A;//added
-$orange: #D65D0E;//added
+@import 'colors.scss';
+@import 'LeftBar.scss';
+@import 'TopBar.scss';
 
-
-.bar, .left-bar {
+.left-bar {
     background-color: $background-alt;
-}
-
-.left-bar-bottom {
-    padding: 0 5px;
-    color: $foreground;
 }
 
 label {
@@ -36,109 +17,62 @@ label {
     font-size: 15px;
 }
 
-.workspaces {
-    padding: 5px 5px 5px 5px;
-    margin-top: 5px;
-    margin-bottom: 0;
-    border-radius: 6px;
-    .workspace-btn.focused {
-        background-color: $foreground;
-        border-color: $yellow;
-        border-width: 3px;
-    }
-    button:hover {
-        background-color: $blue;
-    }
-    .workspace-btn {
-        background-color: $background;
-        color: $yellow;
-        border: $yellow 2px solid;
-        margin: 2px;
-        padding: 2px;
-    }
+window.notification-popups box.notifications {
+    padding: .5em;
 }
 
-.clock {
-    padding: 70px 0 0 0;
-    .clock-hours, .clock-minutes {
-        margin: 2px 5px;
-        background-color: $background;
-        padding: 5px 6px;
-        border-radius: 4px;
-    }
+.icon {
+    min-width: 68px;
+    min-height: 68px;
+    margin-right: 1em;
 }
 
-.battery-box {
-    .battery-icon {
-        font-size: 20px;
-        margin: 5px 5px;
-    }
-    .battery-bar{
-        color: $cyan;
-        padding: 0 3px;
-        margin: 0 4px;
-
-        progress {
-            border-radius: 8px;
-            min-width: 15px;
-        }
-        trough {
-            background-color: $foreground;
-            border-radius: 8px;
-            min-width: 15px;
-            border: none;
-            margin: 4px 0;
-        }
-    }
-    .charging {
-        progress {
-            background-color: $blue;
-        }
-
-        &.battery-icon {
-            color: $blue;
-        }
-    }
-
-    .battery-high {
-        progress {
-            background-color: $green;
-        }
-
-        &.battery-icon {
-            color: $green;
-        }
-    }
-
-    .battery-medium {
-        progress {
-            background-color: $yellow;
-        }
-
-        &.battery-icon {
-            color: $yellow;
-        }
-    }
-
-    .battery-low {
-        progress {
-            background-color: $red;
-        }
-
-        &.battery-icon {
-            color: $red;
-        }
-    }
+.icon image {
+    font-size: 58px;
+    /* to center the icon */
+    margin: 5px;
+    color: $foreground;
 }
 
-
-.lock-button {
-    background-color: $background-alt;
-    color: $orange;
-    padding-right: 5px;
-    border: none;
-    .lock-button-icon {
-        font-size: 20px;
-    }
+.icon box {
+    min-width: 68px;
+    min-height: 68px;
+    border-radius: 7px;
 }
+
+.notification {
+    min-width: 350px;
+    border-radius: 11px;
+    padding: 1em;
+    margin: .5em;
+    border: 1px solid $foreground;
+    background-color: $background;
+}
+
+.notification.critical {
+    border: 1px solid lightcoral;
+}
+
+.title {
+    color: $foreground;
+    font-size: 1.4em;
+}
+
+.body {
+    color: $foreground;
+}
+
+.actions .action-button {
+    margin: 0 .4em;
+    margin-top: .8em;
+}
+
+.actions .action-button:first-child {
+    margin-left: 0;
+}
+
+.actions .action-button:last-child {
+    margin-right: 0;
+}
+
 

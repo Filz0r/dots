@@ -1,34 +1,39 @@
+import openApplications from "./modules/openApplications";
+import systemTray from "./modules/systemTray";
 
 const topBarLeft = () => {
     return Widget.Box({
+        className: "top-bar-left",
         hpack: "start",
-        spacing: 50,
+        vpack: "start",
         children: [
-            media(),
-            clientTitle(),
+            // media(),
+            openApplications(),
         ],
     })
 };
 
 const topBarCenter = () => {
     return Widget.Box({
+        className: "top-bar-center",
         hpack: "center",
-        spacing: 8,
+        vpack: "center",
         children: [
-            weather(),
-            notificationCenter(),
+            // weather(),
+            // notificationCenter(),
         ],
     })
 }
 
 const topBarRight = () => {
     return Widget.Box({
+        className: "top-bar-right",
+        vpack: "end",
         hpack: "end",
-        spacing: 8,
         children: [
+            // connectionMenu(),
             systemTray(),
-            connectionMenu(),
-            powerMenu(),
+            // powerMenu(),
         ],
     })
 }
@@ -39,11 +44,12 @@ const TopBar = (monitor = 0) => {
         name: `top-bar-${monitor}`, // name has to be unique
         class_name: "top-bar",
         monitor,
-        anchor: ["left", "top", "bottom"],
+        anchor: ["left", "top", "right"],
         exclusivity: "exclusive",
         child: Widget.Box({
-            vertical: true,
-            spacing: 100,
+            vertical: false,
+            homogeneous: true,
+            spacing: 250,
             children: [
                 topBarLeft(),
                 topBarCenter(),
@@ -53,4 +59,4 @@ const TopBar = (monitor = 0) => {
     })
 };
 
-export { TopBar };
+export default TopBar ;

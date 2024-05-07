@@ -7,8 +7,8 @@ import batteryMenu from "./modules/batteryMenu";
 const leftBarTop = () => {
     return Widget.Box({
         hpack: "start",
-        // vpack: "center",
-        spacing: 0,
+        vpack: "start",
+        vertical: true,
         children: [
             workspaces(),
         ],
@@ -18,8 +18,8 @@ const leftBarTop = () => {
 const leftBarCenter = () => {
     return Widget.Box({
         hpack: "center",
-        // vpack: "center",
-        spacing: 0,
+        vpack: "center",
+        vertical: true,
         children: [
             clock(),
         ],
@@ -32,8 +32,6 @@ const leftBarBottom = () => {
         hpack: "end",
         vpack: "end",
         vertical: true,
-        // vpack: "center",
-        // spacing: 5,
         children: [
             batteryMenu(),
             lockButton(),
@@ -64,4 +62,4 @@ const LeftBar = (monitor = 0) => {
     })
 };
 
-export { LeftBar };
+export default LeftBar;

@@ -1,11 +1,15 @@
-import {LeftBar} from "./LeftBar/LeftBar";
+import LeftBar from "./LeftBar/LeftBar";
+import TopBar from "./TopBar/TopBar";
+import {NotificationPopups}  from "./services/NotificationPopup";
+import {forMonitor} from "./utils/utils";
+
 
 App.config({
         style: "/tmp/ags/style.css",
         gtkTheme: "gruvbox-dark-gtk",
-        windows: [
-            LeftBar(0),
-            // LeftBar(1),
-        ],
-
+        windows: () => [
+            ...forMonitor(LeftBar),
+            ...forMonitor(TopBar),
+            NotificationPopups(0),
+        ]
 });

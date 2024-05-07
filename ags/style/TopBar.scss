@@ -1,0 +1,54 @@
+@import 'colors.scss';
+
+.top-bar {
+  background-color: $background-alt;
+}
+
+.client-title {
+  background-color: $background-alt;
+  color: $foreground;
+  margin: 6px 0;
+}
+
+.system-tray {
+    background-color: $gray-alt1;
+    padding: 4px 8px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    margin-right: 3px;
+    border-radius: 65px;
+}
+
+.system-tray-item {
+  margin: 0 2px;
+  padding: 2px;
+  background-color: $background;
+  border: 2px solid $yellow;
+  border-radius: 50px;
+  //color: red;
+  &.wifi-icon, &.ethernet-icon {
+    padding-left:  4px;
+    padding-right: 4px;
+  }
+}
+
+.wifi-icon {
+  color: $cyan;
+}
+
+.ethernet-icon {
+  color: $blue;
+}
+
+.open-applications {
+  background-color: $gray-alt1;
+  padding: 2px 3px;
+  border-radius: 40px;
+}
+
+.app-list-icon {
+  margin: 0 1px;
+  border: 2px solid $yellow;
+  border-radius: 40px;
+  //background-color: $foreground;
+}
