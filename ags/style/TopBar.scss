@@ -40,15 +40,12 @@
   color: $blue;
 }
 
-.open-applications {
-  background-color: $gray-alt1;
-  padding: 2px 3px;
-  border-radius: 40px;
-}
-
-.app-list-icon {
-  margin: 0 1px;
-  border: 2px solid $yellow;
-  border-radius: 40px;
-  //background-color: $foreground;
+.clock {
+  //padding: 70px 0 0 0;
+  .clock-hours, .clock-minutes {
+    margin: 2px 3px;
+    background-color: $background;
+    padding: 5px 6px;
+    border-radius: 4px;
+  }
 }

@@ -8,8 +8,9 @@ App.config({
         style: "/tmp/ags/style.css",
         gtkTheme: "gruvbox-dark-gtk",
         windows: () => [
-            ...forMonitor(LeftBar),
             ...forMonitor(TopBar),
+            ...forMonitor(LeftBar),
+            // LeftBar(0),
             NotificationPopups(0),
         ]
 });

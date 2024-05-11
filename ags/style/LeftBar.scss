@@ -1,130 +1,135 @@
-@import 'colors.scss';
+@import "colors.scss";
 
-.left-bar-bottom {
-  padding: 33rem 5px;
-  color: $foreground;
+.left-bar {
+    //margin: 500px 5px;
+    background-color: $background-alt;
+    //border-radius: 40px;
+    padding: 1px 1px;
+    margin: 1px 1px;
+    //min-width: 500px;
 }
 
 .workspaces {
-  padding: 2px 1px;
-  margin: 5px 4px 0;
-  border-radius: 20px;
-  //background-color: $gray-alt1;
-  .workspace-btn.focused {
-    background-color: $foreground;
-    border-color: $orange;
-    border-width: 3px;
-  }
-  button:hover {
-    background-color: $red;
-  }
-  .workspace-btn {
-    background-color: $background;
-    color: $yellow;
-    border: $yellow 2px solid;
-    margin: 2px 2px;
-    padding: 1px;
-    border-radius: 20px;
-  }
+    padding: 4px 3.5px;
+    //margin: 2px 4px;
+    border-radius: 200px;
+    background-color: $background-alt1;
+    .workspace-btn.focused {
+        background-color: $foreground;
+        border-color: $orange;
+        border-width: 3px;
+    }
+    button:hover {
+        background-color: $orange;
+    }
+    .workspace-btn {
+        background-color: $background;
+        color: $yellow;
+        border: $yellow 2px solid;
+        margin: 2px 2px;
+        padding: 1px;
+        border-radius: 20px;
+    }
 }
 
-.clock {
-  //padding: 70px 0 0 0;
-  .clock-hours, .clock-minutes {
-    margin: 2px 5px;
-    background-color: $background;
-    padding: 5px 6px;
-    border-radius: 4px;
-  }
+.workspace-wrapper {
+    background-color: $gray-alt1;
+    padding: 2px 3px;
+    border-radius: 40px;
+}
+
+.app-list-icon {
+    margin: 0 1px;
+    border: 2px solid $yellow;
+    border-radius: 40px;
+    background-color: $background-alt1;
 }
 
 .battery-box {
-  .battery-icon {
-    font-size: 20px;
-    margin: 5px 5.5px;
-  }
-  .battery-bar{
-    color: $cyan;
-    padding: 0 3px;
-    margin: 0 8.75px 0 8.25px;
+    .battery-icon {
+        font-size: 20px;
+        margin: 5px 5.5px;
+    }
+    .battery-bar {
+        color: $cyan;
+        padding: 0 3px;
+        margin: 0 8.75px 0 8.25px;
 
-    progress {
-      border-radius: 8px;
-      min-width: 15px;
+        progress {
+            border-radius: 8px;
+            min-width: 15px;
+        }
+        trough {
+            background-color: $foreground;
+            border-radius: 8px;
+            min-width: 15px;
+            border: none;
+            margin: 4px 0;
+        }
     }
-    trough {
-      background-color: $foreground;
-      border-radius: 8px;
-      min-width: 15px;
-      border: none;
-      margin: 4px 0;
-    }
-  }
-  .charging {
-    progress {
-      background-color: $blue;
-    }
+    .charging {
+        progress {
+            background-color: $blue;
+        }
 
-    &.battery-icon {
-      color: $blue;
-    }
-  }
-
-  .battery-high {
-    progress {
-      background-color: $green;
+        &.battery-icon {
+            color: $blue;
+        }
     }
 
-    &.battery-icon {
-      color: $green;
-    }
-  }
+    .battery-high {
+        progress {
+            background-color: $green;
+        }
 
-  .battery-medium {
-    progress {
-      background-color: $yellow;
-    }
-
-    &.battery-icon {
-      color: $yellow;
-    }
-  }
-
-  .battery-low {
-    progress {
-      background-color: $red;
+        &.battery-icon {
+            color: $green;
+        }
     }
 
-    &.battery-icon {
-      color: $red;
+    .battery-medium {
+        progress {
+            background-color: $yellow;
+        }
+
+        &.battery-icon {
+            color: $yellow;
+        }
     }
-  }
+
+    .battery-low {
+        progress {
+            background-color: $red;
+        }
+
+        &.battery-icon {
+            color: $red;
+        }
+    }
 }
 
-
 .lock-button {
-  background-color: $background-alt;
-  color: $orange;
-  border: none;
-  margin: 1px;
-  .lock-button-icon {
-    //padding: 0 9px 0 4px;
-    //margin: 2px;
-    //padding-right: 3px;
-    border: 2px solid $orange;
-    border-radius: 20px;
-    background-color: $green;
-    //font-size: 20px;
-    image {
-      background-color: $green;
-      color: $orange;
+    background-color: $background-alt;
+    color: $orange;
+    border: none;
+    margin: 1px;
+    .lock-button-icon {
+        //padding: 0 9px 0 4px;
+        //margin: 2px;
+        //padding-right: 3px;
+        border: 2px solid $orange;
+        border-radius: 20px;
+        background-color: $green;
+        //font-size: 20px;
+        image {
+            background-color: $green;
+            color: $orange;
+        }
+        &:hover {
+            background-color: $white;
+        }
     }
-    &:hover {
-        background-color: $white;
-    }
-  }
 }
 
 .lock-button-icon:hover {
-
 }

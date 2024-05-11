@@ -1,6 +1,8 @@
 import openApplications from "./modules/openApplications";
 import systemTray from "./modules/systemTray";
 import clock from "../TopBar/modules/clock";
+import batteryMenu from "../LeftBar/modules/batteryMenu";
+import lockButton from "../LeftBar/modules/lockButton";
 
 
 const topBarLeft = () => {
@@ -36,6 +38,8 @@ const topBarRight = () => {
         children: [
             // connectionMenu(),
             systemTray(),
+            batteryMenu(),
+            lockButton(),
             // powerMenu(),
         ],
     })

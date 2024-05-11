@@ -1,5 +1,3 @@
-import { Button } from "resource:///com/github/Aylur/ags/widgets/button.js";
-import Gtk from "types/@girs/gtk-3.0/gtk-3.0";
 import options from "utils/options";
 import  {dispatchWorkspace, changeToWindow} from "utils/hyprfaces";
 import {Workspace} from "types/service/hyprland";
@@ -36,20 +34,26 @@ const appItem = (address : string) => {
     })
 }
 
+const defaultButton = (id :number) => Widget.Button({
+    attribute: { id },
+    className: "app-list-icon",
+    child: defaultIcon(),
+    onClicked: (w) => dispatchWorkspace(id),
+});
+
 const defaultIcon = () => Widget.Icon({
     icon: distroIcon,
     className: 'default-workspace-icon',
     size: iconSize,
 });
 
-const generateWorkspaceButton = (ws : Workspace) => {
-    const { id } = ws;
-    if (ws.windows < 1)
-        return Widget.Button({
+const generateWorkspaceButton = (id : number) => {
+    const ws = hyprland.getWorkspace(id);
+    if ( !ws|| ws.windows < 1)
+        return Widget.Box({
             attribute: { id },
-            className: "workspace-button",
-            child: defaultIcon(),
-            onClicked: (w) => dispatchWorkspace(ws.id),
+            className: "workspace-wrapper",
+            child: defaultButton(id),
         });
     // console.log(hyprland.clients)
     return Widget.Box({
@@ -57,7 +61,7 @@ const generateWorkspaceButton = (ws : Workspace) => {
             className: "workspace-wrapper",
             vertical: true,
             children: hyprland.clients.map(c => {
-                if (c.workspace.id === ws.id)
+                if (c.workspace.id === id)
                     return appItem(c.address)
                 else
                     return dummyItem(c.address)
@@ -71,61 +75,39 @@ function sortWorkspaces<T extends { attribute: { id :number}}>(arr: T[]) {
         return a.id - b.id;
     });
 }
-let lastAddr;
-function updateWorkspaces<T extends { attribute: {id :number}}>(arr :T[], id :number) {
-    return arr.map((elem) => console.log(elem.attribute));
-    // console.log(arr);
-    // arr.forEach((elem) => {
-    //     lastAddr = elem.child.attribute.address;
-    //     console.log(elem.child.attribute.address)
-    //     console.log(elem.child.class_name)
-    //     if (elem.child.attribute.address !== lastAddr)
-    //         console.log(elem.child.attribute.address)
-    // });
 
-}
-
-const workspaces = () => {
-    let activeWorkspace = hyprland.active.workspace.id;
-    // console.log(hyprland.workspaces);
-    return Widget.Box({
+const workspaces = () =>  Widget.Box({
         homogeneous: false,
         vertical: true,
-        spacing: 8,
+        spacing: 3,
         className: "workspaces",
-        children: sortWorkspaces(hyprland.workspaces.map(w => generateWorkspaceButton(w))),
-        setup: (w) => {
-            w.hook(hyprland.active.client, (w) => {
-                w.children.forEach(m => console.log(m.attribute));
-                // if (typeof address === "string")
-                //     w.children = w.children.filter(ch => ch.attribute.address)
-            }, 'changed')
-            // hyprland.connect("changed", (s) => console.log(s));
-            // w.hook(hyprland.active.client, (self, ...arr) => {
-            //     print("event");
-            //     // console.log(self)
-            //     updateWorkspaces(w.children, 1);
-            //     // w.children = sortWorkspaces(hyprland.workspaces.map(w => generateWorkspaceButton(w)));
-            // });
-            // w.hook(hyprland, (w, ...args) => {
-            //     // console.log("self:", w);
-            //     // console.log("args: ", args);
-            //     print("changed");
-            //     updateWorkspaces(w.children);
-            // }, "changed")
-            // hyprland.connect("client-added", (h) => {
-            //     console.log("________1");
-            //     console.log(h)
-            //     w.children = sortWorkspaces(hyprland.workspaces.map(w => generateWorkspaceButton(w)));
-            // })
-            // hyprland.connect("client-removed", (hm) => {
-            //     console.log("________2");
-                // console.log(hm)
-                // w.children = sortWorkspaces(hyprland.workspaces.map(w => generateWorkspaceButton(w)));
-            // })
-        }
-    });
-}
+        children: sortWorkspaces(hyprland.workspaces.map(w => generateWorkspaceButton(w.id))),
+        setup: (w) => w
+                .hook(hyprland, (w, id?: number) => {
+                    console.log("here2")
+                    console.log(id);
+                    w.children = sortWorkspaces(hyprland.workspaces.map(w => generateWorkspaceButton(w.id)))
+                 }, "client-removed")
+                .hook(hyprland, (w, id?: number) => {
+                    console.log("here")
+                    console.log(id);
+                    w.children = sortWorkspaces(hyprland.workspaces.map(w => generateWorkspaceButton(w.id)))
+                }, "client-added")
+                .hook(hyprland, (w, id?: number) => {
+                    w.children = sortWorkspaces(hyprland.workspaces.map(w => generateWorkspaceButton(w.id)))
+                }, "workspace-added")
+                // .hook(hyprland, (w, event?: string) => {
+                //    console.log(event);
+                // }, "event")
+                .hook(hyprland, (w, event?: string) => {
+                    console.log(event);
+                    if (typeof event === "string") {
+                        if (event === "createworkspace" || event === "destroyworkspace") {
+                            w.children = sortWorkspaces(hyprland.workspaces.map(w => generateWorkspaceButton(w.id)))
+                        }
+                    }
+                }, "event")
+});
 
 
 
