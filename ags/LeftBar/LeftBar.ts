@@ -1,5 +1,4 @@
 import workspaces from "./modules/workspaces";
-import clock from "./modules/clock";
 import lockButton from "./modules/lockButton";
 import batteryMenu from "./modules/batteryMenu";
 
@@ -11,6 +10,8 @@ const leftBarTop = () => {
         vertical: true,
         children: [
             workspaces(),
+            batteryMenu(),
+            lockButton(),
         ],
     })
 };
@@ -21,14 +22,13 @@ const leftBarCenter = () => {
         vpack: "center",
         vertical: true,
         children: [
-            clock(),
         ],
     })
 }
 
 const leftBarBottom = () => {
     return Widget.Box({
-        class_name: "left-bar-bottom",
+        className: "left-bar-bottom",
         hpack: "end",
         vpack: "end",
         vertical: true,
@@ -51,12 +51,12 @@ const LeftBar = (monitor = 0) => {
         // margins: [0, 2, 0, 0],
         child: Widget.Box({
             vertical: true,
-            homogeneous: true,
+            // homogeneous: true,
             spacing: 250,
             children: [
                 leftBarTop(),
-                leftBarCenter(),
-                leftBarBottom()
+                // leftBarCenter(),
+                // leftBarBottom()
             ],
         }),
     })

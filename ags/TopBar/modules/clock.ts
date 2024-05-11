@@ -20,7 +20,7 @@ const clock = () => {
 
     return Widget.Box({
         class_name: "clock",
-        vertical: true,
+        // vertical: true,
         children: [
             hourLabel,
             minuteLabel

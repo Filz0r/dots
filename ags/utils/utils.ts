@@ -13,3 +13,4 @@ export const forMonitor = (bar : (monitor : number) => Gtk.Window) => {
 export function maxToPercent(max :number, value :number) {
     return  value / max;
 }
+

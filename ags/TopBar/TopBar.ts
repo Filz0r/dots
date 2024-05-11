@@ -1,5 +1,7 @@
 import openApplications from "./modules/openApplications";
 import systemTray from "./modules/systemTray";
+import clock from "../TopBar/modules/clock";
+
 
 const topBarLeft = () => {
     return Widget.Box({
@@ -8,7 +10,7 @@ const topBarLeft = () => {
         vpack: "start",
         children: [
             // media(),
-            openApplications(),
+            // openApplications(),
         ],
     })
 };
@@ -19,6 +21,7 @@ const topBarCenter = () => {
         hpack: "center",
         vpack: "center",
         children: [
+            clock(),
             // weather(),
             // notificationCenter(),
         ],

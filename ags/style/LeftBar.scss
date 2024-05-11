@@ -1,7 +1,7 @@
 @import 'colors.scss';
 
 .left-bar-bottom {
-  padding: 0 5px;
+  padding: 33rem 5px;
   color: $foreground;
 }
 
@@ -108,14 +108,23 @@
   border: none;
   margin: 1px;
   .lock-button-icon {
-    padding: 0 9px 0 4px;
+    //padding: 0 9px 0 4px;
     //margin: 2px;
     //padding-right: 3px;
     border: 2px solid $orange;
     border-radius: 20px;
-    font-size: 20px;
-    &.lock-hover {
+    background-color: $green;
+    //font-size: 20px;
+    image {
+      background-color: $green;
+      color: $orange;
+    }
+    &:hover {
         background-color: $white;
     }
   }
+}
+
+.lock-button-icon:hover {
+
 }

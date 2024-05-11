@@ -8,22 +8,15 @@ const lockButton = () => {
     return Widget.Button({
         vpack: "end",
         cursor: "pointer",
-        class_name: "lock-button",
+        className: "lock-button",
         child: Widget.Icon({
             icon: options.icons.lock,
+            className: "lock-button-icon",
             size: options.sizes.lockButton,
         }),
         onClicked: () => {
             Utils.exec(`${cmd}`);
         },
-        onHover: (self) => {
-            // @ts-ignore
-            self.child.className += " lock-hover";
-        },
-        onHoverLost:  (self) => {
-            // @ts-ignore
-            self.child.className = self.child.className.replace(" lock-hover", "");
-        }
     })
 }
 
