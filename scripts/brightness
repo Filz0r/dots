@@ -1,0 +1,101 @@
+#!/bin/bash
+
+current=$(light | awk -F. '{print $1}')
+ 
+get_current() {
+	echo "$current"
+}
+ 
+get_icon() {
+	if [ "$current" -gt "70" ]; then
+		echo "󰃠"
+	elif [ "$current" -gt "40" ]; then
+		echo "󰃟"
+	elif [ "$current" -lt "20" ]; then
+		echo "󰃞"
+	fi 
+} 
+
+increase() {
+	#if [ "$current" -eq "100" ]; then 
+		#notify-send "Already at $current%!"
+	#else
+		light -A 10
+		#notify-send "Brightness at $(light | awk -F. '{print $1'})%"
+	#fi
+}
+ 
+decrease() {
+	#if [ "$current" -eq "10" ]; then 
+#		notify-send "Already at $current%!"
+#	else
+		light -U 10
+#		notify-send "Brightness at $(light | awk -F. '{print $1'})%"
+#	fi
+}
+
+half () {
+	light -S 50
+#	notify-send "Brightness at $(light | awk -F. '{print $1'})%"
+}
+ 
+max() {
+	light -S 100
+#	notify-send "Brightness at $(light | awk -F. '{print $1'})%"
+}
+
+min() {
+	light -S 10
+#	notify-send "Brightness at $(light | awk -F. '{print $1'})%"
+}
+ 
+cycle_values() {
+	if [ "$current" -gt "70" ]; then
+		half
+	elif [ "$current" -gt "40" ]; then
+		min
+	elif [ "$current" -lt "40" ]; then
+		max
+	 
+	fi
+} 
+ 
+case $1 in
+	curr)
+		get_current 
+		;;
+	inc)
+		increase 
+		;;
+	dec)
+		decrease 
+		;;
+	half)
+		half 
+		;;	
+	max)
+		max 
+		;; 
+	min)
+		min 
+		;; 
+	icon)
+		get_icon
+		;; 
+	cycle)
+		cycle_values
+		;; 
+	*)
+		echo "invalid option!
+
+options: 
+	curr -> get current brightness
+	icon -> get current icon
+	cycle -> cycle between max/half/min
+	inc -> increase brightness by 10%
+	dec -> decrease brightness by 10%
+	max -> set max brightness
+	min -> set min brightness
+	half -> set 50% brightness"
+		;;
+esac

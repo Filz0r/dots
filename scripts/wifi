@@ -1,0 +1,78 @@
+#!/bin/bash
+
+available=$(nmcli -f ssid device wifi | sort | uniq | sed /SSID/d) #<- ???
+
+ 
+get_connection_list() {
+mapfile -t connections < <(nmcli -f NAME connection | sed /^lo/d | sed /NAME/d)
+for conn in "${connections[@]}"; do
+    #echo "hey -> $conn"
+    buf="$buf (button :class \"known-nets\" :onclick \"$HOME/.config/scripts/wifi connect $conn\" \"$conn\")"
+done
+echo "(box :orientation \"v\" :spacing 5 :class \"net-box\" $buf)"
+exit
+}
+ 
+get_info() {
+	echo "I do nothing"
+}
+
+get_icon() {
+	echo "I do nothing"
+}
+show_menu() {
+	echo "I do nothing"
+}
+toggle() {
+	mapfile -t connections < <(nmcli -f NAME UUID connection | sed /^lo/d | sed /NAME/d)
+	for conn in "${connections[@]}"; do
+    	echo "hey -> $conn"
+    	#buf="$buf (button :class \"known-nets\" :onclick \"$HOME/.config/scripts/wifi connect $conn\" \"$conn\")"
+	done
+	echo "(box :orientation \"v\" :spacing 5 :class \"net-box\" $buf)"
+}
+ 
+add_new_net() {
+	eww -c $HOME/.config/eww/wifi close menu 
+	nm-connection-editor --create & disown
+	exit	 
+}
+ 
+change_connection () {
+	eww -c $HOME/.config/eww/wifi close menu 
+	nmcli connection up $1 &> $HOME/debug.log
+#	exit	 
+} 
+
+case $1 in 
+	info)
+		get_info
+		;;
+	icon)
+		get_icon
+		;;
+	menu)
+		show_menu
+		;;
+	toggle)
+		toggle
+		;;
+	connections)
+		get_connection_list
+		;;
+	add_new)
+		add_new_net
+		;; 
+	connect)
+		change_connection $2
+		;;
+	*)
+		echo "
+Invalid option.
+Available options:
+	info	-> shows if there is any wifi connectivity
+	icon	-> Outputs the icon corresponding to the current status
+	menu	-> Shows the wifi menu that allows to connect to known networks
+	toggle	-> Toggles wifi on/off"
+		;; 
+esac

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+formatted_date=$(date +'%d_%m_%Y_%H_%M_%S')
+out_path="$HOME/Pictures/Screenshots/screenshot_$formatted_date.png" 
+wayshot -f "$out_path" 

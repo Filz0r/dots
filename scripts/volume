@@ -1,0 +1,62 @@
+#!/bin/bash
+
+
+active=$(pactl info | grep "Default Sink: " | cut -d" " -f3)
+percent=$(pactl list sinks | grep -i "Volume: front-left" | awk '{print $5}')
+mute=$(pactl list sinks | grep -i "mute:" | awk '{print $2}') 
+get_volume() {
+	echo "$(pactl list sinks | grep -i "Volume: front-left" | awk '{print $5}' | sed 's/\%//')" 
+	#notify-send "Volume" "Current volume at $(pactl list sinks | grep -i "Volume: front-left" | awk '{print $5}')"
+}
+ 
+change_volume() {
+ pactl set-sink-volume "$active" "$1"
+ #notify-send "Volume" "Current volume at $(pactl list sinks | grep -i "Volume: front-left" | awk '{print $5}')"
+ exit 0
+}
+
+mute_sink() {
+ pactl set-sink-mute "$active" toggle
+# if [ "$mute" == "no" ]; then 
+#	 notify-send "Volume" "Audio is muted"
+# else
+#	 notify-send "Volume" "Audio unmuted. Volume: $percent" 
+# fi 
+ exit 0
+}
+
+get_icon() {
+	per=$(pactl list sinks | grep -i "front-left" | awk '{print $5}' | sed 's/\%//') 
+	if [ $mute == "no" ]; then 
+		if [ "$per" -gt "80" ]; then
+			echo "󰕾"
+		elif [ "$per" -gt "50" ]; then
+			echo "󰖀"
+		else
+			echo "󰕿"
+		fi
+	else
+		echo "󰖁"
+	fi
+} 
+
+case $1 in
+	mute)
+		mute_sink
+		;;
+	inc)
+		change_volume "+5%"
+		;;
+	dec)
+		change_volume "-5%"
+		;;
+	percent)
+		get_volume
+		;;
+	icon)
+		get_icon
+		;;
+	*)
+		echo "invalid option"
+		;;
+esac

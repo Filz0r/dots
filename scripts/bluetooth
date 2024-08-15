@@ -1,0 +1,69 @@
+#!/bin/sh
+
+current=$(bluetoothctl -- show | grep -i 'Powered:' | awk '{print $2}')
+ 
+if [ "$current" == "yes" ]; then
+	power=on
+else
+	power=off
+fi
+
+get_info() {
+	echo $power	 
+}
+
+get_icon() {
+	if [ "$power" == "on" ]; then
+		echo "󰂯"
+	else
+		echo "󰂲"
+	fi
+}
+
+
+toggle() {
+	if [ "$power" == "on" ]; then
+		bluetoothctl -- power off &> /dev/null
+	else
+		bluetoothctl -- power on &> /dev/null
+	fi
+}
+
+menu() {
+	echo "nope"
+}
+
+settings() {
+				:cursor		  "pointer" 
+	echo "nope2"
+}
+
+case $1 in
+	info)
+		get_info
+		;;
+	icon)
+		#get_info
+		get_icon
+		;;
+	menu)
+		open_menu
+		;;
+	settings)
+		open_settings
+		;;
+	toggle)
+		#get_info
+		toggle
+		;;
+	*)
+		echo "
+Invalid option.
+Available options:
+	info		-> Shows current status.
+	icon		-> Gives the icon corresponding to the current status
+	menu		-> Opens the Bluetooth menu
+	settings	-> Opens bluetooth settings app
+	toggle		-> Toggles Bluetooth on/off"
+		;;
+esac
