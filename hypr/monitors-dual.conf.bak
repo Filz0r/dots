@@ -1,5 +1,6 @@
 # Monitor layouts, doing it like this might be usefull for scripting for hybrid configs
 # EG: using a laptop as a desktop or similar
-monitor=eDP-1, 1920x1080@60, 0x0, 1
+monitor=eDP-1, 1920x1080@60,0x1080,1
+monitor=HDMI-A-2, 1920x1080@60, 0x0, 1
 
 

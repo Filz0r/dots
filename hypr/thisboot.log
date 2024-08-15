@@ -1,0 +1,211 @@
+Environment variable $QT_QPA_PLATFORMTHEME not set, ignoring.
+Environment variable $XDG_DATA_DIRS not set, ignoring.
+discover_other_daemon: 1GNOME_KEYRING_CONTROL=/run/user/1000/keyring
+Environment variable $QT_QPA_PLATFORMTHEME not set, ignoring.
+Environment variable $XDG_DATA_DIRS not set, ignoring.
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported maximum keycode 708, clipping.
+>                   X11 cannot support keycodes above 255.
+> Warning:          Could not resolve keysym XF86KbdInputAssistPrevgrou
+> Warning:          Could not resolve keysym XF86KbdInputAssistNextgrou
+Errors from xkbcomp are not fatal to the X server
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported maximum keycode 708, clipping.
+>                   X11 cannot support keycodes above 255.
+> Warning:          Could not resolve keysym XF86KbdInputAssistPrevgrou
+> Warning:          Could not resolve keysym XF86KbdInputAssistNextgrou
+Errors from xkbcomp are not fatal to the X server
+Gjs-Console-Message: 16:11:08.473: initial  on
+Gjs-Console-Message: 16:11:08.687: main shit Wireguard {
+    "wireguard-active": false
+}
+Gjs-Console-Message: 16:11:08.741: notification added undefined
+[0.151] Ignoring invalid config line: 'symbol_map'
+[0.151] Ignoring invalid config line: 'font_features'
+[0.152] Ignoring invalid config line: 'url_excluded_characters'
+[0.154] Ignoring unknown config key: resize_draw_strategy
+[0.156] Ignoring invalid config line: 'env'
+[0.156] Ignoring invalid config line: 'watcher'
+[0.156] Ignoring invalid config line: 'exe_search_path'
+[0.156] Ignoring invalid config line: 'file_transfer_confirmation_bypass'
+[0.157] Ignoring invalid config line: 'action_alias'
+[0.157] Ignoring invalid config line: 'kitten_alias'
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:24:05.858: bash: symbol lookup error: /usr/lib/libc.so.6: undefined symbol: argp_program_version_hook, version GLIBC_2.2.5
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:25:13.003: awk: symbol lookup error: /usr/lib/libgmp.so.10: undefined symbol: __gmpn_addlsh1_n_silvermont
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:25:18.906: awk: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_check_termtype2, version NCURSES6_TIC_5.5.20051010
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:26:03.063: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_screen_of, version NCURSES6_TINFO_5.7.20081102
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:26:05.874: awk: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_find_entry, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:26:08.199: awk: symbol lookup error: /usr/lib/libreadline.so.8: undefined symbol: rl_insert_comment
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:26:56.227: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_find_entry, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:27:02.236: awk: symbol lookup error: /usr/lib/libgmp.so.10: undefined symbol: __gmpn_addlsh1_n_silvermont
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:27:14.954: awk: symbol lookup error: /usr/lib/libgmp.so.10: undefined symbol: __gmpn_addlsh1_n_silvermont
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:28:30.075: awk: symbol lookup error: /usr/lib/libgmp.so.10: undefined symbol: __gmp_extract_double
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:31:11.296: awk: symbol lookup error: /usr/lib/libgmp.so.10: undefined symbol: __printf_chk, version GLIBC_2.3.4
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:54:54.709: awk: symbol lookup error: /usr/lib/libmpfr.so.6: undefined symbol: mpfr_l2b_30_1__tab
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:54:56.858: bash: symbol lookup error: bash: undefined symbol: rl_vi_insertion_mode
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:54:58.807: bash: symbol lookup error: bash: undefined symbol: rl_char_is_quoted_p
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:55:00.862: bash: symbol lookup error: bash: undefined symbol: rl_char_is_quoted_p
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:55:05.868: awk: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_find_entry, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:55:54.930: awk: symbol lookup error: /usr/lib/libc.so.6: undefined symbol: __libc_enable_secure, version GLIBC_PRIVATE
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:55:54.931: awk: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_find_entry, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:56:03.788: awk: symbol lookup error: /usr/lib/libreadline.so.8: undefined symbol: _rl_isearch_terminators
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:56:40.973: bash: symbol lookup error: bash: undefined symbol: rl_char_is_quoted_p
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:58:02.943: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_find_entry, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:58:11.946: awk: symbol lookup error: /usr/lib/libmpfr.so.6: undefined symbol: mpfr_l2b_30_1__tab
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:58:14.950: awk: symbol lookup error: /usr/lib/libreadline.so.8: undefined symbol: rl_insert_comment
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:58:31.217: awk: symbol lookup error: /usr/lib/libgmp.so.10: undefined symbol: __gmpn_addmul_2_atom
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:58:31.958: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_find_entry, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:58:49.891: awk: symbol lookup error: /usr/lib/libmpfr.so.6: undefined symbol: mpfr_l2b_26_1__tab
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:58:58.970: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_find_entry, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 16:59:05.179: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_locale_breaks_acs, version NCURSES6_TINFO_5.4.20040208
+[0.172] Ignoring invalid config line: 'symbol_map'
+[0.173] Ignoring invalid config line: 'font_features'
+[0.174] Ignoring invalid config line: 'url_excluded_characters'
+[0.177] Ignoring unknown config key: resize_draw_strategy
+[0.180] Ignoring invalid config line: 'env'
+[0.180] Ignoring invalid config line: 'watcher'
+[0.180] Ignoring invalid config line: 'exe_search_path'
+[0.181] Ignoring invalid config line: 'file_transfer_confirmation_bypass'
+[0.182] Ignoring invalid config line: 'action_alias'
+[0.182] Ignoring invalid config line: 'kitten_alias'
+[4.611] [PARSE ERROR] Unknown DCS escape code: zz
+[4.611] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:00:12.046: bash: symbol lookup error: bash: undefined symbol: rl_vi_insertion_mode
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:00:13.188: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_find_entry, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:00:19.189: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_is_abs_path, version NCURSES6_TINFO_5.6.20061217
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:00:40.066: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_suppress_warnings, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:01:06.021: awk: symbol lookup error: /usr/lib/libreadline.so.8: undefined symbol: _rl_isearch_terminators
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:01:22.620: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_keypad, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:02:11.644: awk: symbol lookup error: /usr/lib/libgmp.so.10: undefined symbol: __gmp_extract_double
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:02:15.317: bash: symbol lookup error: /usr/lib/libc.so.6: undefined symbol: __libc_enable_secure, version GLIBC_PRIVATE
+[0.120] Ignoring invalid config line: 'symbol_map'
+[0.120] Ignoring invalid config line: 'font_features'
+[0.121] Ignoring invalid config line: 'url_excluded_characters'
+[0.123] Ignoring unknown config key: resize_draw_strategy
+[0.125] Ignoring invalid config line: 'env'
+[0.125] Ignoring invalid config line: 'watcher'
+[0.125] Ignoring invalid config line: 'exe_search_path'
+[0.125] Ignoring invalid config line: 'file_transfer_confirmation_bypass'
+[0.126] Ignoring invalid config line: 'action_alias'
+[0.126] Ignoring invalid config line: 'kitten_alias'
+[604.464] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[604.464] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[604.464] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[609.326] [PARSE ERROR] Unknown DCS escape code: zz
+[609.326] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:12:44.118: awk: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_find_entry, version NCURSES6_TINFO_5.0.19991023
+[Parent 560877, IPC I/O Parent] WARNING: process 562129 is a zombie: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:245
+[725.301] [PARSE ERROR] Unknown DCS escape code: zz
+[725.302] [PARSE ERROR] Unknown CSI code: 'm' with start_modifier: '␀' and end_modifier: '%' and parameters: '0'
+[745.437] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[745.441] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[745.441] [PARSE ERROR] The application is trying to use xterm's modifyOtherKeys. This is superseded by the kitty keyboard protocol: https://sw.kovidgoyal.net/kitty/keyboard-protocol/ the application should be updated to use that
+[Parent 560877, IPC I/O Parent] WARNING: process 635340 is a zombie: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:245
+[Parent 560877, IPC I/O Parent] WARNING: process 836348 is a zombie: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:245
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:29:28.195: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_find_entry, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:30:37.156: awk: symbol lookup error: /usr/lib/libmpfr.so.6: undefined symbol: mpfr_l2b_30_1__tab
+[Parent 560877, IPC I/O Parent] WARNING: process 839255 is a zombie: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:245
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:32:20.196: awk: symbol lookup error: /usr/lib/libgmp.so.10: undefined symbol: __gmpn_addlsh1_n_silvermont
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:35:30.223: awk: symbol lookup error: /usr/lib/libgmp.so.10: undefined symbol: __gmpz_divexact
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 17:38:03.438: bash: symbol lookup error: /usr/lib/libreadline.so.8: undefined symbol: _rl_active_region_start_color
+[Parent 560877, IPC I/O Parent] WARNING: process 561749 is a zombie: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:245
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 18:00:11.000: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_check_termtype2, version NCURSES6_TIC_5.5.20051010
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 18:05:58.316: awk: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_find_entry, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 18:10:32.614: awk: symbol lookup error: /usr/lib/libreadline.so.8: undefined symbol: rl_vi_prev_word
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 18:24:52.684: awk: symbol lookup error: /usr/lib/libreadline.so.8: undefined symbol: _rl_isearch_terminators
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported maximum keycode 708, clipping.
+>                   X11 cannot support keycodes above 255.
+> Warning:          Could not resolve keysym XF86KbdInputAssistPrevgrou
+> Warning:          Could not resolve keysym XF86KbdInputAssistNextgrou
+Errors from xkbcomp are not fatal to the X server
+2024-08-15 18:27:09 - [swaylock-1.7.2/main.c:321] Failed to lock session -- is another lockscreen running?
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported maximum keycode 708, clipping.
+>                   X11 cannot support keycodes above 255.
+> Warning:          Could not resolve keysym XF86KbdInputAssistPrevgrou
+> Warning:          Could not resolve keysym XF86KbdInputAssistNextgrou
+Errors from xkbcomp are not fatal to the X server
+2024-08-15 18:27:12 - [swaylock-1.7.2/pam.c:105] pam_authenticate failed: invalid credentials
+2024-08-15 18:32:22 - [swaylock-1.7.2/main.c:321] Failed to lock session -- is another lockscreen running?
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported maximum keycode 708, clipping.
+>                   X11 cannot support keycodes above 255.
+> Warning:          Could not resolve keysym XF86KbdInputAssistPrevgrou
+> Warning:          Could not resolve keysym XF86KbdInputAssistNextgrou
+Errors from xkbcomp are not fatal to the X server
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 18:35:08.753: bash: symbol lookup error: /usr/lib/libreadline.so.8: undefined symbol: _rl_release_sigint
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 18:36:40.783: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_check_termtype2, version NCURSES6_TIC_5.5.20051010
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 18:48:05.186: bash: symbol lookup error: /usr/lib/libncursesw.so.6: undefined symbol: _nc_keypad, version NCURSES6_TINFO_5.0.19991023
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 18:50:43.002: bash: symbol lookup error: /usr/lib/libreadline.so.8: undefined symbol: _rl_isearch_dispatch
+
+(com.github.Aylur.ags:1569): Gjs-Console-CRITICAL **: 18:56:10.426: bash: symbol lookup error: /usr/lib/libc.so.6: undefined symbol: argp_program_version_hook, version GLIBC_2.2.5
+2024-08-15 19:11:13 - [swaylock-1.7.2/main.c:321] Failed to lock session -- is another lockscreen running?
+2024-08-15 19:15:20 - [swaylock-1.7.2/main.c:321] Failed to lock session -- is another lockscreen running?
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported maximum keycode 708, clipping.
+>                   X11 cannot support keycodes above 255.
+> Warning:          Could not resolve keysym XF86KbdInputAssistPrevgrou
+> Warning:          Could not resolve keysym XF86KbdInputAssistNextgrou
+Errors from xkbcomp are not fatal to the X server
+2024-08-15 19:15:23 - [swaylock-1.7.2/pam.c:105] pam_authenticate failed: invalid credentials
+[0.069] Ignoring invalid config line: 'symbol_map'
+[0.069] Ignoring invalid config line: 'font_features'
+[0.069] Ignoring invalid config line: 'url_excluded_characters'
+[0.070] Ignoring unknown config key: resize_draw_strategy
+[0.071] Ignoring invalid config line: 'env'
+[0.071] Ignoring invalid config line: 'watcher'
+[0.071] Ignoring invalid config line: 'exe_search_path'
+[0.071] Ignoring invalid config line: 'file_transfer_confirmation_bypass'
+[0.072] Ignoring invalid config line: 'action_alias'
+[0.072] Ignoring invalid config line: 'kitten_alias'
