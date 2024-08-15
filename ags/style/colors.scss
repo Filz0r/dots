@@ -1,18 +1,45 @@
-$background: #282828; // changed
-$background-alt: #32302f; // changed
-$background-alt1: #222120; // added
-$foreground: #ebdbb2; // changed
-$black: #fff; //changed
-$white: $foreground; //changed
-$gray: #a89984; //changed
-$gray-alt: #928374; //changed
-$gray-alt1: #60574e; //added
-$red: #cc241d; //changed
-$green: #98971a; //changed
-$yellow: #d79921; //changed
-$blue: #458588; //changed
+$background0: #1d2021;
+$background1: #282828;
+$background2: #3c3836;
+$background3: #504945;
+$background4: #665c54;
+$background5: #7c6f64;
+$background6: #32302f;
+$background-alt1: #222120;
+$foreground: #ebdbb2;
+$foreground0: #fbf1c7;
+$foreground1: $foreground;
+$foreground2: #d5c4a1;
+$foreground3: #bdae93;
+$foreground4: #a89984;
+$gray-light0: #928374;
+$gray-light1: #a89984;
+$gray-dark: #60574e;
+$red-dark: #9d0006;
+$red-light0: #cc241d;
+$red-light1: #fb4934;
+$green-light0: #98971a;
+$green-light1: #b8bb26;
+$green-dark: #79740e;
+$yellow-light0: #d79921;
+$yellow-light1: #fabd2f;
+$yellow-dark: #b57614;
+$blue-light0: #458588;
+$blue-light1: #83a598;
+$blue-dark: #076678;
+$orange-light0: #d65d0e;
+$orange-light1: #fe8019;
+$orange-dark: #af3a03;
+$purple-light0: #b16286;
+$purple-light1: #d3869b;
+$purple-dark: #8f3f71;
+$aqua-light0: #689d6a;
+$aqua-light1: #8ec07c;
+$aqua-dark: #427b58;
+// Extras
+$aqua: #689d6a;
 $magenta: #bb9af7;
 $cyan: #7dcfff;
-$purple: #b16286; //added
-$aqua: #689d6a; //added
-$orange: #d65d0e; //added
+$white: $foreground;
+$background: $background1;
+$black: $background0;
