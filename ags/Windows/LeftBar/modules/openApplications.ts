@@ -1,4 +1,4 @@
-import options from "../../utils/options";
+import options from "../../../utils/options";
 
 const { openApps: iconSize } = options.sizes;
 

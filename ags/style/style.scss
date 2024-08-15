@@ -1,20 +1,24 @@
-/* Created   by https://github.com/Filz0r 
+/* Created   by https://github.com/Filz0r
    Designed  by https://github.com/Filz0r
    Maintained by https://github.com/Filz0r
 */
 
 // Variable Color's
-@import 'colors.scss';
-@import 'LeftBar.scss';
-@import 'TopBar.scss';
+@import "colors.scss";
+@import "LeftBar.scss";
+@import "TopBar.scss";
+@import "QuickSettings.scss";
+@import "iconClasses.scss";
 
 label {
     font-weight: bold;
     font-size: 15px;
 }
 
+
+
 window.notification-popups box.notifications {
-    padding: .5em;
+    padding: 0.5em;
 }
 
 .icon {
@@ -40,7 +44,7 @@ window.notification-popups box.notifications {
     min-width: 350px;
     border-radius: 11px;
     padding: 1em;
-    margin: .5em;
+    margin: 0.5em;
     border: 1px solid $foreground;
     background-color: $background;
 }
@@ -59,8 +63,8 @@ window.notification-popups box.notifications {
 }
 
 .actions .action-button {
-    margin: 0 .4em;
-    margin-top: .8em;
+    margin: 0 0.4em;
+    margin-top: 0.8em;
 }
 
 .actions .action-button:first-child {
@@ -70,5 +74,3 @@ window.notification-popups box.notifications {
 .actions .action-button:last-child {
     margin-right: 0;
 }
-
-

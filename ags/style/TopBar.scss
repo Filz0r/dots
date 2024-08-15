@@ -1,17 +1,12 @@
-@import 'colors.scss';
+@import "colors.scss";
 
 .top-bar {
-  background-color: $background-alt;
-}
-
-.client-title {
-  background-color: $background-alt;
-  color: $foreground;
-  margin: 6px 0;
+    background-color: $background1;
+    //border: none;
 }
 
 .system-tray {
-    background-color: $gray-alt1;
+    background-color: $gray-dark;
     padding: 4px 8px;
     margin-bottom: 3px;
     margin-top: 3px;
@@ -20,32 +15,138 @@
 }
 
 .system-tray-item {
-  margin: 0 2px;
-  padding: 2px;
-  background-color: $background;
-  border: 2px solid $yellow;
-  border-radius: 50px;
-  //color: red;
-  &.wifi-icon, &.ethernet-icon {
-    padding-left:  4px;
-    padding-right: 4px;
-  }
+    margin: 0 2px;
+    padding: 0 4.5px;
+    background-color: $background;
+    border: 2px solid $yellow-light0;
+    border-radius: 100%;
+    //color: red;
+    &.wifi-icon,
+    &.ethernet-icon {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
 }
 
 .wifi-icon {
-  color: $cyan;
+    color: $cyan;
 }
 
 .ethernet-icon {
-  color: $blue;
+    color: $blue-light0;
+}
+
+.weather-tooltip {
+    margin: 2px 3px;
+    background-color: $background3;
+    color: $foreground;
+    padding: 5px 6px;
+    border-radius: 4px;
 }
 
 .clock {
-  //padding: 70px 0 0 0;
-  .clock-hours, .clock-minutes {
-    margin: 2px 3px;
+    //padding: 70px 0 0 0;
+    .clock-hours,
+    .clock-minutes {
+        margin: 2px 3px;
+        background-color: $background3;
+        color: $foreground;
+        padding: 5px 6px;
+        border-radius: 4px;
+    }
+}
+
+.battery-box {
+    //margin: 0 5px;
+    //margin: 100px 0;
+    &:hover {
+        background-color: $background3;
+        border-radius: 4px;
+    }
+    progress {
+        border-radius: 8000px;
+        min-height: 18.75px;
+    }
+    trough {
+        background-color: $foreground;
+        border-radius: 8000px;
+        min-height: 18.75px;
+        //border: none;
+        margin: 2.5px 0.125px;
+    }
+    .battery-icon {
+        font-size: 24px;
+        margin: 5px;
+    }
+    .battery-bar {
+        color: $cyan;
+        padding: 7.5px 0;
+        margin: 0 8.75px;
+    }
+    .charging {
+        progress {
+            background-color: $blue-light0;
+        }
+
+        &.battery-icon {
+            color: $blue-light0;
+        }
+    }
+
+    .battery-high {
+        progress {
+            background-color: $green-light0;
+        }
+
+        &.battery-icon {
+            color: $green-light0;
+        }
+    }
+
+    .battery-medium {
+        progress {
+            background-color: $yellow-light0;
+        }
+
+        &.battery-icon {
+            color: $yellow-light0;
+        }
+    }
+
+    .battery-low {
+        progress {
+            background-color: $red-light0;
+        }
+
+        &.battery-icon {
+            color: $red-light0;
+        }
+    }
+}
+
+.lock-button {
     background-color: $background;
-    padding: 5px 6px;
-    border-radius: 4px;
-  }
+    color: $orange-light0;
+    //border: none;
+    //margin: 1px;
+    padding: 5px;
+    .lock-button-icon {
+        //padding: 0 9px 0 4px;
+        //margin: 2px;
+        //padding-right: 3px;
+        border: 1px solid $orange-light0;
+        border-radius: 20px;
+        background-color: $green-light0;
+        //font-size: 20px;
+        image {
+            background-color: $green-light0;
+            color: $orange-light0;
+        }
+        &:hover {
+            background-color: $white;
+        }
+    }
+}
+
+.lock-button-icon:hover {
 }

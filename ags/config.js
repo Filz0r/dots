@@ -22,6 +22,9 @@ try {
         '--external', 'gi://*',
         '--external', 'file://*',
     ]);
+    await Utils.execAsync([
+        'sassc', `${App.configDir}/style/style.scss`, '/tmp/ags/style.css'
+    ]);
     await import(`file://${main}`);
 } catch (error) {
     console.error(error);

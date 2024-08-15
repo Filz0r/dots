@@ -6,12 +6,19 @@ const LeftBar = (monitor = 0) => {
         monitor,
         anchor: ["left", "top", "bottom"],
         exclusivity: "exclusive",
-        vpack: "center",
-        hpack: "start",
+        // vpack: "end",
+        // hpack: "start",
+        vexpand: true,
         // margins: [0, 2, 0, 0],
         child: Widget.Box({
+            vertical: true,
             className: "left-bar",
-            child: workspaces()
+            children: [
+                workspaces(),
+                // Widget.Box({
+                //     css:"padding:1px; background-color:red",
+                // })
+            ]
         }),
     })
 };

@@ -1,0 +1,30 @@
+@import "colors.scss";
+
+.toggle-button,
+.cycle-button {
+    background-color: $background3;
+    /* margin: 0px 2px; */
+    padding: 0 1px;
+    border-radius: 500px;
+    border: 1px solid $background2;
+}
+
+.vpn-active {
+    color: $red-dark;
+}
+
+.vpn-disabled {
+    color: $green-light0;
+}
+
+.kbd-off {
+    color: $foreground1;
+}
+
+.kbd-low {
+    color: $blue-light1;
+}
+
+.kbd-high {
+    color: $blue-light0;
+}

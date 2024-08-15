@@ -1,10 +1,4 @@
-const hours = Variable("", {
-    poll: [1000, 'date "+%H"'],
-});
-
-const minutes = Variable("", {
-    poll: [1000, 'date "+%M"'],
-});
+import {hours, minutes} from "../../../utils/variables";
 
 
 const clock = () => {

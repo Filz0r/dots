@@ -1,0 +1,168 @@
+@import "colors";
+
+.quick-settings {
+    background-color: $background2;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: display 0.5s linear;
+}
+
+.quick-settings-box {
+    min-width: 350px;
+    padding: 10px;
+    border: 1.5px $background solid;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.quick-settings-btn {
+    margin: 0;
+    padding-right: 5px;
+    border: none;
+    box-shadow: none;
+    background-color: $background1;
+    &:hover {
+        background-color: $background2;
+    }
+}
+
+.quick-settings-btn-icon {
+    color: $orange-light0;
+}
+
+.quick-settings-item {
+    margin: 4px;
+    padding: 5px 10px;
+    //box-shadow: none;
+    background-color: $background3;
+    box-shadow: 1px 1px 5px 0 $background;
+    &:hover {
+        background-color: $background4;
+    }
+}
+
+.quick-settings-item-label {
+    margin: 0 10px;
+}
+
+.quick-settings-separator {
+    border-radius: 20px;
+    border: 0.25px $background solid;
+    margin: 2px 0;
+}
+
+.quick-settings-item-icon {
+    color: $green-light0;
+    &.power-off {
+        color: $red-light0;
+    }
+    &.restart {
+        color: $blue-light0;
+    }
+    &.sleep {
+        color: $purple-light0;
+    }
+    &.lock {
+        color: $yellow-light0;
+    }
+}
+
+.quick-settings-speaker-slider,
+.quick-settings-microphone-slider {
+    padding: 10px;
+    margin: 2px;
+    border: 2px $background solid;
+    border-radius: 20px;
+    contents {
+        through {
+            slider {
+                margin: 10px;
+            }
+            highlight {
+                margin: 10px;
+            }
+        }
+    }
+}
+
+.battery-bar-qs {
+    color: $cyan;
+    padding-bottom: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    progress,
+    trough {
+        min-height: 20px;
+        border-radius: 20px;
+    }
+}
+
+.battery-icon-qs {
+    margin: 0;
+    padding: 1px 0 0 4px;
+    //border: 2px sandybrown solid;
+    //border-radius: 20px;
+}
+
+.charging {
+    progress {
+        background-color: $blue-light0;
+    }
+    &.battery-icon-qs {
+        color: $blue-light0;
+    }
+}
+
+.battery-high {
+    progress {
+        background-color: $green-light0;
+    }
+    &.battery-icon-qs {
+        color: $green-light0;
+    }
+}
+
+.battery-medium {
+    progress {
+        background-color: $yellow-light0;
+    }
+    &.battery-icon-qs {
+        color: $yellow-light0;
+    }
+}
+
+.battery-low {
+    progress {
+        background-color: $red-light0;
+    }
+    &.battery-icon-qs {
+        color: $red-light0;
+    }
+}
+
+.storage-icon-qs {
+    margin: 12px 0 12px 5px;
+}
+
+.network-box-qs {
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.qs-info-box {
+    padding: 5px;
+    background-color: $gray-dark;
+    border-radius: 8px;
+    margin: 0 5px;
+    box-shadow: 1px 1px 5px 0 $background;
+}
+
+.quick-settings-stats {
+    margin: 10px 5px;
+    padding: 10px 5px;
+    border-radius: 20px;
+    background-color: $background3;
+    border: 1.5px $background solid;
+}
