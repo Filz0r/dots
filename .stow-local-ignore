@@ -1,0 +1,7 @@
+LICENSE
+.git
+.gitignore
+.config/ags/node_modules
+.config/ags/logs
+.config/ags/@girs
+.zsh/zsh-autosuggestions/
